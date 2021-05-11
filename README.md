@@ -1,4 +1,5 @@
 # kick-the-bucket
 
-## Collaborators:
+## Collaborators
+- Kevin Coleman
 - Rachel Taima
