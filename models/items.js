@@ -5,6 +5,7 @@ const itemSchema = new mongoose.Schema({
   name: String,
   desc: String,
   completeStatus: Boolean,
+  completedAt: Date
 })
 
 const Item = mongoose.model('Item', itemSchema)
