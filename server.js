@@ -17,11 +17,12 @@ app.use(express.static('public'))
 app.use(express.json())
 
 //CONTROLLERS:
-
+const itemsController = require('./controllers/item_controller.js')
+app.use('/items', itemsController)
 
 //ROUTES:
 app.get('/' , (req, res) => {
-  res.send('Hello World.')
+  res.redirect('/items')
   // res.redirect('/items');
 });
 
