@@ -28,3 +28,22 @@ app.get('/' , (req, res) => {
 
 //LISTENER:
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+
+//connection:
+mongoose.connect(PROJECT3_DB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+})
+
+// Error / success
+mongoose.connection.on('error', err =>
+  console.log(
+    err.message,
+    ' is Mongod not running?/Problem with Atlas Connection?'
+  )
+)
+mongoose.connection.on('connected', () =>
+  console.log('mongo connected: ', PROJECT3_DB)
+)
+mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
