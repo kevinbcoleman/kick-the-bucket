@@ -19,3 +19,18 @@
   - tackled the backend.
   - researched login authentication that will work will with React
   - got the routes to work and created related models.
+3. May 13 2021
+   - Tackling Login Authentication
+   - Login Authentication is hurting my brain. Am I just overthinking it?
+
+### Challenges
+1. Login Authentication:
+   - The user must be logged in for them to be able to add, edit, and delete an item.
+   - set the username to be undefined or an empty string
+   - The password is still going to be incrypted.
+   - Single Page Applications somewhat hurt my brain.
+   - Do you create a function that can be called by POST that will add the user and save it within the database? Since it has been noted by the tech advisor to create login auth within the backend.
+   - Does that mean when the login page is being rendered with the function attached to the POST route then there isn't a need for the frontend to do anything kinda? Like I wouldn't create the function with React.
+   - Does that mean when the auth has been verified......do I have to create a verified function to use when the user is trying to login?
+   - A locate user function???
+   - Am I literally overthinking it???
