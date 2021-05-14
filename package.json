@@ -1,7 +1,7 @@
 {
   "name": "kick-the-bucket",
   "version": "1.0.0",
-  "description": "## Collaborators: - Rachel Taima",
+  "description": "## Collaborators - Kevin Coleman - Rachel Taima",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
