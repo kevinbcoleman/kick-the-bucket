@@ -4,7 +4,7 @@
 - Node.js, Mongoose, Express, and React
 
 ## Collaborators
-- Kevin Coleman
+- Kevin Coleman.
 - Rachel Taima
 
 ## About
