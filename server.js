@@ -13,12 +13,14 @@ const PORT = process.env.PORT || 3003
 const PROJECT3_DB =  process.env.PROJECT3_DB
 
 //Middleware:
-app.use(express.static('public'))
 app.use(express.json())
+app.use(express.static('public'))
 
 //CONTROLLERS:
 const itemsController = require('./controllers/item_controller.js')
-app.use('/items', itemsController)
+app.use('/bucketitems', itemsController)
+const usersController = require('./controllers/users_controllers.js')
+app.use('/users', usersController)
 
 //ROUTES:
 app.get('/' , (req, res) => {

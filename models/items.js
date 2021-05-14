@@ -11,6 +11,10 @@ const itemSchema = new mongoose.Schema({
   completionDate: {
     type: Date,
     default: Date.now
+  },
+  public: {
+    type: Boolean,
+    default: false
   }
 })
 

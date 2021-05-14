@@ -11,11 +11,22 @@ bucketItems.get('/', (req,res) => {
   })
 })
 
+// //Activities Feed:
+// bucketItems.get('/public', (req,res) => {
+//   Item.find({public:true}, (error, publicItems) => {
+//     res.json(publicItems)
+//   })
+// })
+
 //create route:
 bucketItems.post('/', (req,res) => {
-  Item.create(req.body, (error, createdItem) => {
-    Item.find({}, (error, foundItems) => {
-      res.json(foundItems)
+  User.findOne({username: req.body.currentUser.username}, (error, foundUser) => {
+    console.log(foundUser)
+    Item.create(req.body, (error, createdItem) => {
+      foundUser.bucketItems.push(createdItem)
+      foundUser.save((error, data) => {
+        res.json(data)
+      })
     })
   })
 })
@@ -27,13 +38,13 @@ bucketItems.put('/:id', (req,res) => {
     req.body,
     {new: true},
     (error, updatedItem) => {
-      if(error){
-        res.send(error)
-      }else{
-        Item.find({}, (error, foundItems) => {
-          res.json(foundItems)
+      User.findOne({username: req.body.currentUser.username}, (error, foundUser) => {
+        foundUser.bucketItems.id(req.params.id).remove()
+        foundUser.bucketitems.push(updatedItem)
+        foundUser.save((error, data) => {
+          res.json(data)
         })
-      }
+      })
     }
   )
 })

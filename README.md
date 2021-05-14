@@ -34,3 +34,4 @@
    - Does that mean when the auth has been verified......do I have to create a verified function to use when the user is trying to login?
    - A locate user function???
    - Am I literally overthinking it???
+   - When the user logs in, it updates the currentUser with state.
