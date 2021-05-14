@@ -22,6 +22,8 @@
 3. May 13 2021
    - Tackling Login Authentication
    - Login Authentication is hurting my brain. Am I just overthinking it?
+4. May 14 2021
+   - Login Authentication understandment came to me in the dead of night as I was about to go sleep. Ruined my sleep but I hit a break through. 
 
 ### Challenges
 1. Login Authentication:
@@ -35,3 +37,5 @@
    - A locate user function???
    - Am I literally overthinking it???
    - When the user logs in, it updates the currentUser with state.
+  2. React Routes
+   - gotta do it
