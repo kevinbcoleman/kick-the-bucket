@@ -4,7 +4,6 @@
 class App extends React.Component{
   state = {
     currentUser: '',
-    username: ''
   }
   handleSignin = (event) => {
     event.preventDefault()
@@ -12,7 +11,6 @@ class App extends React.Component{
       this.setState({
         console.log(response.data)
         currentUser: response.data,
-        username: response.data.username
       })
     })
   }

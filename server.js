@@ -19,7 +19,7 @@ app.use(express.static('public'))
 //CONTROLLERS:
 const itemsController = require('./controllers/item_controller.js')
 app.use('/bucketitems', itemsController)
-const usersController = require('./controllers/users_controllers.js')
+const usersController = require('./controllers/user_controller.js')
 app.use('/users', usersController)
 
 //ROUTES:
