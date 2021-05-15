@@ -1,6 +1,5 @@
 // console.log('hello world');
-// import Feed from './components/Feed.js'
-
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 class App extends React.Component {
   state = {
     currentUser: '',
