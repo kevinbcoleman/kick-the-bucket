@@ -6,10 +6,42 @@ class Item extends React.Component {
         <div className="card-body">
           <h3 className="card-title">{this.props.item.name}</h3>
           <p className="card-text">{this.props.item.desc}</p>
-          <button className="btn btn-dark">Add Item</button>
+
+
+          <details >
+            <summary className='btn btn-dark'>Edit</summary>
+
+            <form id={this.props.item._id} onSubmit={this.props.onSubmit}>
+              <label htmlFor="category">Category</label>
+              <input
+                type="text"
+                id="category"
+                onChange={this.props.onChange}
+                className='form-control'
+              />
+
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                onChange={this.props.onChange}
+                className='form-control'
+              />
+
+              <label htmlFor="desc">Description</label>
+              <input
+                type="text"
+                id="desc"
+                onChange={this.props.onChange}
+                className='form-control'
+              />
+              <input className='btn btn-primary' type="submit" value="Update Item" />
+            </form>
+          </details>
+          <button className='btn btn-danger' onClick={this.props.onClick} value={this.props.item._id}>DELETE</button>
         </div>
 
-      </div>
+      </div >
     )
   }
 }

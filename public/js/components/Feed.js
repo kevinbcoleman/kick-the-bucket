@@ -6,6 +6,9 @@ class Feed extends React.Component {
           <Item
             key={item._id}
             item={item}
+            onSubmit={this.props.onEdit}
+            onChange={this.props.change}
+            onClick={this.props.onDelete}
           />
         ))}
       </div>

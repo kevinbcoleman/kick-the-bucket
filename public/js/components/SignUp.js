@@ -1,9 +1,23 @@
 class SignUp extends React.Component {
-  handleSubmit = (data) => {
+  state = {
+    username: '',
+    password: ''
+  }
+  onChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+  handleSubmit = (event) => {
     event.preventDefault()
-    console.log('form data', data)
+    const { username, password } = this.state
+
+    axios.post('/', { username, password }).then((response) => {
+      console.log(response)
+    })
   }
   render = () => {
+    const { username, password } = this.state
     return (
       <div>
         <form className="mx-auto" style={formStyle} onSubmit={this.handleSubmit} >
@@ -11,10 +25,24 @@ class SignUp extends React.Component {
             <h1>Create an Account</h1>
           </header>
           <label htmlFor="username"></label>
-          <input className="form-control mb-2" type="text" name="username" id="username" placeholder="USERNAME" required />
+          <input
+            className="form-control mb-2"
+            type="text"
+            name="username" id="username"
+            value={username}
+            placeholder="USERNAME" required
+            onChange={this.onChange}
+          />
 
           <label htmlFor="password"></label>
-          <input className="form-control" type="text" name="password" id="password" placeholder="PASSWORD" required />
+          <input
+            className="form-control"
+            type="text"
+            name="password" id="password"
+            value={password}
+            placeholder="PASSWORD" required
+            onChange={this.onChange}
+          />
 
           <input className="btn btn-primary mt-2" type="submit" value="Submit" />
         </form>
