@@ -9,18 +9,22 @@ const User = require('../models/users.js')
 // there is no getting rid of your account on this app. If you wanna leave, then die...hence the Kick the Bucket title
 
 //path '/users/signup': creating a new user
-users.post('/signup', (req,res) => {
+users.post('/', (req, res) => {
   let hashedPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
 
   User.create(req.body, (error, createdUser) => {
-    console.log('user is created: ', createdUser);
-    res.json(createdUser)
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('user is created: ', createdUser);
+      res.json(createdUser)
+    }
   })
 })
 
 //path '/users/signin': log in the user, find the user.
-users.get('/signin', (req,res) => {
-  User.findOne({username: req.body.username}, (error, foundUser) => {
+users.get('/signin', (req, res) => {
+  User.findOne({ username: req.body.username }, (error, foundUser) => {
     if (error) {
       console.log(error);
     } else if (!foundUser) {

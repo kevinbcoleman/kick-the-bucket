@@ -4,14 +4,15 @@ class LogIn extends React.Component {
       <div>
         <h1>Sign In</h1>
         <form className="mx-auto" style={formStyle} action="">
-          <label className="form-control" htmlFor="username">User Name</label>
-          <input type="text" name="username" id="username" required />
+          <label htmlFor="username"></label>
+          <input className="form-control mb-2" type="text" name="username" id="username" placeholder="USERNAME" required />
 
-          <label className="form-control" htmlFor="password">Password</label>
-          <input type="text" name="password" id="password" required />
+          <label htmlFor="password"></label>
+          <input className="form-control" type="text" name="password" id="password" placeholder="PASSWORD" required />
 
-          <input type="submit" value="Submit" />
+          <input style={buttonStyle} className="btn btn-primary mt-2" type="submit" value="Submit" />
         </form>
+
       </div>
     )
 
