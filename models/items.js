@@ -14,7 +14,9 @@ const itemSchema = new mongoose.Schema({
   },
   public: {
     type: Boolean,
-    default: false
+    //changed this to true for easier testing but
+    //we can go back to false if we want.
+    default: true
   }
 })
 
