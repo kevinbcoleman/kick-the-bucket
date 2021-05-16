@@ -50,4 +50,3 @@ mongoose.connection.on('connected', () =>
   console.log('mongo connected: ', PROJECT3_DB)
 )
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
-/* mongodb+srv://<username>:<password>@project2.ymbaa.mongodb.net/kickTheBucket?retryWrites=true&w=majority*/
