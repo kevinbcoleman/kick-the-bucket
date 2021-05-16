@@ -33,6 +33,33 @@ class App extends React.Component {
 
       <ReactRouterDOM.BrowserRouter>
         <div className="App">
+          <Header />
+          <nav className="navbar navbar-expand-md navbar-light bg-light">
+            <div className="container-fluid">
+              {/* <a class="navbar-brand" href="#">Navbar</a> */}
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <Link className="nav-link active" aria-current="page" to='/'>Feed</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link className="nav-link" to='/signin'>Log In</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link className="nav-link" to='/signup'>Sign Up</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to='/useritems'>My Bucket List</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          {/* 
           <nav className="navbar">
             <ul>
               <li>
@@ -48,7 +75,8 @@ class App extends React.Component {
                 <Link to='/useritems'>My Bucket List</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
+
           <div className="content">
             <Switch>
               <Route exact path='/'>

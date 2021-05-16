@@ -1,7 +1,7 @@
 class Feed extends React.Component {
   render = () => {
     return (
-      <div>
+      <div className='mt-5'>
         { this.props.items.map((item) => (
           <Item
             key={item._id}
