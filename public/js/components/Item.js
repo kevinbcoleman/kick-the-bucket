@@ -48,4 +48,8 @@ class Item extends React.Component {
 
 const cardStyle = {
   maxWidth: "50%"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c3cc2e10a674dd3873fcc11f65d39f0811676cde
