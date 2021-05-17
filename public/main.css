@@ -1,0 +1,128 @@
+/* body{
+  background-image: url(./imgs/dewang-gupta-ESEnXckWlLY-unsplash.jpeg);
+} */
+html {
+  background: url(./imgs/dewang-gupta-ESEnXckWlLY-unsplash.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+  margin: 6em 2em;
+}
+#app-name-container{
+  background-color: rgba(255, 181, 167, 0.5);
+}
+#app-name{
+  font-family: 'Carter One', cursive;
+  font-size: 5em;
+  background-color: rgba(255, 181, 167, 0);
+  text-shadow: 2px 1.5px 2px rgb(109, 104, 117);
+}
+nav{
+  background: url(./imgs/dewang-gupta-ESEnXckWlLY-unsplash.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div#navbarNav{
+  justify-content: center;
+}
+ul.navbar-nav {
+  justify-content: flex-start;
+}
+li.nav-item{
+  margin: 0em 4em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  color: black;
+}
+li.nav-item:hover{
+  background-color: rgba(255,255,255, 0.6)
+}
+
+div.content > h1 {
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  color: black;
+}
+div.welcome-text{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.welcome-text > h1{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+div.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0em;
+}
+
+div.about > h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+div.about > p {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0em 6em;
+}
+div.bucket-list > h3{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+div.bucket-list > p{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0em 6em;
+  padding-bottom: .5em;
+}
+
+div.quotes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0em;
+}
+div.quotes > h4 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: .25em;
+}
+p > li{
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: .5em;
+  list-style: none;
+}
+
+/* Feed CSS */
+div.card-header, h3.card-title{
+  font-family: 'Raleway', sans-serif;
+}
+
+p.card-text{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Buttons on the Feed */
+summary.btn.btn-dark{
+  border: none;
+  background-color: rgb(229, 152, 155);
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+button.btn.btn-danger{
+  border: none;
+  background-color: rgb(109, 104, 117);
+  font-family: 'Montserrat Alternates', sans-serif;
+}

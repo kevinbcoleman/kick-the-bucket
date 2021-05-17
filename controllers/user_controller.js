@@ -1,3 +1,4 @@
+
 const bcrypt = require('bcrypt')
 const express = require('express')
 const users = express.Router()
@@ -10,34 +11,34 @@ const User = require('../models/users.js')
 
 //path '/users/signup': creating a new user
 users.post('/signup', (req, res) => {
-  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
 
-  User.create(req.body, (error, createdUser) => {
-    if (error) {
-      console.log(error)
-    } else {
-      console.log('user is created: ', createdUser);
-      res.json(createdUser)
-    }
-  })
+User.create(req.body, (error, createdUser) => {
+  if (error) {
+    console.log(error)
+  } else {
+    console.log('user is created: ', createdUser);
+    res.json(createdUser)
+  }
+})
 })
 
 //path '/users/signin': log in the user, find the user.
 users.get('/signin', (req, res) => {
-  User.findOne({ username: req.body.username }, (error, foundUser) => {
-    if (error) {
-      console.log(error);
-    } else if (!foundUser) {
-      console.log('Wow....User not found.');
+User.findOne({ username: req.body.username }, (error, foundUser) => {
+  if (error) {
+    console.log(error);
+  } else if (!foundUser) {
+    console.log('Wow....User not found.');
+  } else {
+    if (bcyrpt.compareSync(req.body.password, foundUser.password)) {
+      console.log(foundUser);
+      res.json(foundUser)
     } else {
-      if (bcyrpt.compareSync(req.body.password, foundUser.password)) {
-        console.log(foundUser);
-        res.json(foundUser)
-      } else {
-        console.log('password does not match. Try again.');
-      }
+      console.log('password does not match. Try again.');
     }
-  })
+  }
+})
 })
 
 
