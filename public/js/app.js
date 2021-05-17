@@ -130,7 +130,30 @@ class App extends React.Component {
           <div className="content">
             <Switch>
               <Route exact path='/'>
-                <h1>Home</h1>
+                <h1>Welcome fellow Bucket-Kicker!</h1>
+                <div className="welcome-text">
+                  <div className="about">
+                    <h3>Why "Kick the Bucket" ?</h3>
+                    <p>A nice reminder that death is inevitable and it wouldn't be fun to go to the after life and tell stories about what you did in the land of the living! It is also a little somewhat play on words to reference a Bucket List.</p>
+                  </div>
+                  <div className="bucket-list">
+                    <h3>What is a "Bucket List" ?</h3>
+                    <p>A Bucket-List is a list of a number of experiences/achievements that a person hopes to have or accomplish during their lifetime.</p>
+                    <p>A bucket-list can be created at any point of time of a person's life. The only question to ask oneself is "What do you want to do?" followed by "How much do you want it?"</p>
+                    <p>Disregarding the more unacceptable items based on society of today (such as murder, homicide, and/or possibly anything that can get you arrested and more.), best place to begin building the list is to ask yourself "What were the things you wanted to do as a kid?"</p>
+                  </div>
+                  <div className="quotes">
+                    <h4>Here are some Inspirational quotes to get you moving:</h4>
+                    <ul className="quotes-text">
+                    <p>
+                      <li>"As soon as anyone starts telling you to be realistic, cross that person off your invitation list." - John Eliot</li>
+                      <li>"We all have two choices; we can make a living or we can design a life." - Jim Rohn</li>
+                      <li>"By recording your dreams and goals on paper, you set in motion the process of becoming the person you most want to be." - Mark Victore Hansen</li>
+                    </p>
+                    </ul>
+                  </div>
+                  <h1>Good Luck Bucket-kicker!</h1>
+                </div>
               </Route>
 
               <Route path='/feed'>
