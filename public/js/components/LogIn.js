@@ -1,27 +1,78 @@
-class LogIn extends React.Component {
-  render = () => {
-    return (
-      <div>
-        <form className="mx-auto" style={formStyle} action="">
-          <header>
-            <h1>Log In</h1>
-          </header>
-          <label htmlFor="username"></label>
-          <input className="form-control mb-2" type="text" name="username" id="username" placeholder="USERNAME" required />
+// class LogIn extends React.Component {
+//   state = {
+//     currentUser: {},
+//     username: '',
+//     password: ''
+//   }
+//   onChange = (event) => {
+//     this.setState({
+//       [event.target.name]: event.target.value
+//     })
+//   }
+  // handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   // const { username, password } = this.state
 
-          <label htmlFor="password"></label>
-          <input className="form-control" type="text" name="password" id="password" placeholder="PASSWORD" required />
+  //   axios.get('/users/signin').then((response) => {
+  //     this.setState({
+  //       currentUser: response.data
+  //     })
+  //     console.log(currentUser)
+  //   })
+  // }
+  // handleSignin = (event) => {
+  //   event.preventDefault()
+  //   axios.get('/users/signin').then((response) => {
+  //     console.log(event)
+  //     // console.log(response.data.bucketItems)
+  //     this.setState({
+  //       currentUser: response.data._id,
+  //       username: response.data.username,
+  //       // items: response.data.bucketItems
+  //     })
+  //     console.log(this.state.currentUser)
+  //   })
+  // }
+  // render = () => {
+    // const { username, password } = this.state
 
-          <input className="btn btn-primary mt-2" type="submit" value="Submit" />
-        </form>
+//     return (
+//       <div>
+//         <form className="mx-auto" style={formStyle} onSubmit={this.handleSignin}>
+//           <header>
+//             <h1>Log In</h1>
+//           </header>
+//           <label htmlFor="username"></label>
+//           <input
+//             className="form-control mb-2"
+//             type="text"
+//             name="username"
+//             id="username"
+//             value={this.state.username}
+//             placeholder="USERNAME" required
+//             onChange={this.onChange}
+//           />
 
-      </div>
-    )
+//           <label htmlFor="password"></label>
+//           <input className="form-control"
+//             type="text" name="password"
+//             id="password"
+//             value={this.state.password}
+//             placeholder="PASSWORD"
+//             required
+//             onChange={this.onChange}
+//           />
 
-  }
-}
+//           <input className="btn btn-primary mt-2" type="submit" value="Submit" />
+//         </form>
 
-const formStyle = {
-  maxWidth: "50%"
-}
+//       </div>
+//     )
+
+//   }
+// }
+
+// const formStyle = {
+//   maxWidth: "50%"
+// }
 

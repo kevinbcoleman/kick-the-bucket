@@ -2,20 +2,29 @@
 const Switch = ReactRouterDOM.Switch
 const Link = ReactRouterDOM.Link
 const Route = ReactRouterDOM.Route
+const Redirect = ReactRouterDOM.Redirect
+const History = ReactRouterDOM.History
 
 class App extends React.Component {
   state = {
     currentUser: '',
-    items: []
+    items: [],
+    // toFeed: false,
+    // history: History
   }
-  handleSignin = (event) => {
-    event.preventDefault()
-    axios.get('/users/signin').then((response) => {
-      this.setState({
-        currentUser: response.data,
-      })
-    })
-  }
+
+  // handleSignin = (event) => {
+  //   event.preventDefault()
+  //   axios.get('/users/signin').then((response) => {
+  //     console.log(event)
+  //     // console.log(response.data.bucketItems)
+  //     this.setState({
+  //       currentUser: response.data,
+  //       items: response.data.bucketItems
+  //     })
+  //   })
+  // }
+
   ////////////////////////////
   handleChange = event => {
     this.setState({ [event.target.id]: event.target.value })
@@ -26,8 +35,23 @@ class App extends React.Component {
     axios
       .post('/bucketitems', this.state)
       .then(response =>
-        this.setState({ items: response.data, category: '', name: '', desc: '' })
+        this.setState({
+          items: response.data,
+          category: '',
+          name: '',
+          desc: '',
+        })
       )
+    // {
+    //   this.state.toFeed === true ?
+    //     this.setState({
+    //       toFeed: false
+    //     })
+    //     : this.setState({
+    //       toFeed: true
+    //     })
+    // }
+    // this.handleFeed()
   }
 
 
@@ -44,6 +68,10 @@ class App extends React.Component {
     })
   }
 
+  // handleFeed = () => {
+  //   { this.state.toFeed === true ? this.state.history.push('/feed') : null }
+  // }
+
   deleteItem = event => {
     axios.delete('/bucketitems/' + event.target.value).then(response => {
       this.setState({
@@ -51,7 +79,6 @@ class App extends React.Component {
       })
     })
   }
-
 
   ////////////////////////////
 
@@ -78,12 +105,15 @@ class App extends React.Component {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
+                    <Link className="nav-link" to='/'>Home</Link>
+                  </li>
+                  <li className="nav-item">
                     <Link className="nav-link active" aria-current="page" to='/feed'>Feed</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to='/addItem'>Add an Item</Link>
                   </li>
-                  <li class="nav-item">
+                  {/* <li class="nav-item">
                     <Link className="nav-link" to='/signin'>Log In</Link>
                   </li>
                   <li class="nav-item">
@@ -91,7 +121,7 @@ class App extends React.Component {
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to='/useritems'>My Bucket List</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -100,6 +130,10 @@ class App extends React.Component {
 
           <div className="content">
             <Switch>
+              <Route exact path='/'>
+                <h1>Home</h1>
+              </Route>
+
               <Route path='/feed'>
                 <Feed
                   items={this.state.items}
@@ -117,7 +151,11 @@ class App extends React.Component {
                 />
               </Route>
 
-              <Route path='/signin'>
+
+
+              {/* <Redirect from="/addItem" to="/feed" /> */}
+
+              {/* <Route path='/signin'>
                 <LogIn />
               </Route>
 
@@ -127,7 +165,7 @@ class App extends React.Component {
 
               <Route path='/useritems'>
                 <UserItems />
-              </Route>
+              </Route> */}
             </Switch>
           </div>
 
