@@ -23,7 +23,7 @@ const usersController = require('./controllers/user_controller.js')
 app.use('/users', usersController)
 
 //ROUTES:
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.redirect('/items')
   // res.redirect('/items');
 });
