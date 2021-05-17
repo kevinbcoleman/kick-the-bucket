@@ -1,0 +1,32 @@
+{
+  "name": "kick-the-bucket",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.16.1"
+  },
+  "description": "## Collaborators - Kevin Coleman - Rachel Taima",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbcoleman/kick-the-bucket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinbcoleman/kick-the-bucket/issues"
+  },
+  "homepage": "https://github.com/kevinbcoleman/kick-the-bucket#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.8",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  }
+}
