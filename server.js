@@ -22,10 +22,7 @@ app.use('/bucketitems', itemsController)
 const usersController = require('./controllers/user_controller.js')
 app.use('/users', usersController)
 
-//ROUTES:
-app.get('/', (req, res) => {
-  res.redirect('/bucketitems');
-});
+//ROUTES
 
 //LISTENER:
 app.listen(PORT, () => console.log('Listening on port:', PORT));
