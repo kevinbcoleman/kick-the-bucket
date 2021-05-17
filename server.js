@@ -10,7 +10,7 @@ require('dotenv').config()
 const PORT = process.env.PORT || 3003
 
 //DATABASE: Connect to the database via heroku or locally
-const PROJECT3_DB =  process.env.PROJECT3_DB
+const PROJECT3_DB = process.env.PROJECT3_DB
 
 //Middleware:
 app.use(express.json())
@@ -23,13 +23,13 @@ const usersController = require('./controllers/user_controller.js')
 app.use('/users', usersController)
 
 //ROUTES:
-app.get('/' , (req, res) => {
+app.get('*', (req, res) => {
   res.redirect('/items')
   // res.redirect('/items');
 });
 
 //LISTENER:
-app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+app.listen(PORT, () => console.log('Listening on port:', PORT));
 
 //connection:
 mongoose.connect(PROJECT3_DB, {
