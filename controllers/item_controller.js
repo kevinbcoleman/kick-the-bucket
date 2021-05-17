@@ -6,6 +6,7 @@ const Item =require('../models/items.js')
 
 //Index Route:
 bucketItems.get('/',(req,res) => {
+
   Item.find({}, (error, foundItems) => {
     res.json(foundItems)
   })
