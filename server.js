@@ -24,7 +24,7 @@ app.use('/users', usersController)
 
 //ROUTES:
 app.get('/', (req, res) => {
-  res.redirect('/bucketitems');
+  res.redirect('/');
 });
 
 //LISTENER:
