@@ -1,4 +1,3 @@
-
 const Switch = ReactRouterDOM.Switch
 const Link = ReactRouterDOM.Link
 const Route = ReactRouterDOM.Route
@@ -27,7 +26,7 @@ class App extends React.Component {
 
   ////////////////////////////
   handleChange = event => {
-    this.setState({[event.target.id]: event.target.value })
+    this.setState({ [event.target.id]: event.target.value })
   }
 
   handleSubmit = event => {
@@ -158,11 +157,9 @@ class App extends React.Component {
               {/* <Route path='/signin'>
                 <LogIn />
               </Route>
-
               <Route path='/signup'>
                 <SignUp />
               </Route>
-
               <Route path='/useritems'>
                 <UserItems />
               </Route> */}

@@ -15,5 +15,3 @@ class Feed extends React.Component {
     )
   }
 }
-
-
