@@ -23,7 +23,12 @@
    - Tackling Login Authentication
    - Login Authentication is hurting my brain. Am I just overthinking it?
 4. May 14 2021
-   - Login Authentication understandment came to me in the dead of night as I was about to go sleep. Ruined my sleep but I hit a break through. 
+   - Login Authentication understandment came to me in the dead of night as I was about to go sleep. Ruined my sleep but I hit a break through.
+5. May 15 2021
+   - React was added. React-Router was added as well.
+   - Some CSS using Bootstrap was added
+6. May 16 2021
+   - Finishing it up.
 
 ### Challenges
 1. Login Authentication:
@@ -38,4 +43,7 @@
    - Am I literally overthinking it???
    - When the user logs in, it updates the currentUser with state.
   2. React Routes
-   - gotta do it
+   - gotta do it. Did it.
+  3. Life:
+   - Life was its usual unexpected self.
+   - Didn't really see that coming 
