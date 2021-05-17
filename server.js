@@ -10,7 +10,7 @@ require('dotenv').config()
 const PORT = process.env.PORT || 3003
 
 //DATABASE: Connect to the database via heroku or locally
-const PROJECT3_DB = process.env.MONGODB_URI
+const PROJECT3_DB = process.env.PROJECT3_DB
 
 //Middleware:
 app.use(express.json())
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => console.log('Listening on port:', PORT));
 
 //connection:
-mongoose.connect(PROJECT3_DB, {
+mongoose.connect( PROJECT3_DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
