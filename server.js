@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => console.log('Listening on port:', PORT));
 
 //connection:
-mongoose.connect( PROJECT3_DB , {
+mongoose.connect(PROJECT3_DB,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,

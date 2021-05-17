@@ -1,6 +1,9 @@
 {
   "name": "kick-the-bucket",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.16.1"
+  },
   "description": "## Collaborators - Kevin Coleman - Rachel Taima",
   "main": "server.js",
   "scripts": {
