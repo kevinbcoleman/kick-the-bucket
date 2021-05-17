@@ -11,6 +11,9 @@ html {
 body{
   margin: 6em 2em;
 }
+div.content{
+  padding-bottom: 0.5em;
+}
 #app-name-container{
   background-color: rgba(255, 181, 167, 0.5);
 }
@@ -116,6 +119,7 @@ p.card-text{
 }
 
 /* Buttons on the Feed. Doing some styling. */
+
 summary.btn.btn-dark{
   border: none;
   background-color: rgb(229, 152, 155);
@@ -125,4 +129,25 @@ button.btn.btn-danger{
   border: none;
   background-color: rgb(109, 104, 117);
   font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* Add new Item */
+form.mx-auto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header > h2 {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 0.5em;
+}
+label{
+  padding: 0.40em 0em;
+}
+input.btn.btn-primary{
+  margin: .75em 0em;
+  border: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: rgb(255, 205, 178);
 }
